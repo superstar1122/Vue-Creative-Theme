@@ -1,0 +1,72 @@
+{
+  "name": "@vue/theme",
+  "version": "2.3.0",
+  "description": "The VitePress theme for vuejs.org.",
+  "main": "src/index.ts",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./config": {
+      "types": "./src/vitepress/config/baseConfig.d.ts",
+      "default": "./src/vitepress/config/baseConfig.js"
+    },
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "src",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/theme.git"
+  },
+  "keywords": [
+    "vue",
+    "design-system"
+  ],
+  "author": "Evan You",
+  "license": "MIT",
+  "homepage": "https://theme.vuejs.org",
+  "bugs": {
+    "url": "https://github.com/vuejs/theme/issues"
+  },
+  "scripts": {
+    "lint": "prettier --check --write --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
+    "lint:fail": "prettier --check --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
+    "type": "vue-tsc --noEmit",
+    "test": "npm run lint && npm run type",
+    "dev": "vitepress dev demo",
+    "demo-build": "vitepress build demo",
+    "serve": "npm run demo-build && vitepress serve demo"
+  },
+  "dependencies": {
+    "@docsearch/css": "^3.6.0",
+    "@docsearch/js": "^3.6.0",
+    "@vueuse/core": "^10.9.0",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "normalize.css": "^8.0.1",
+    "tiny-decode": "^0.1.3"
+  },
+  "devDependencies": {
+    "@mdit-vue/types": "^2.1.0",
+    "@types/body-scroll-lock": "^3.1.2",
+    "@types/estree": "^1.0.5",
+    "@types/node": "^20.12.12",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "vitepress": "^1.2.2",
+    "vue": "^3.4.27",
+    "vue-tsc": "^2.0.19"
+  },
+  "peerDependencies": {
+    "vitepress": "^1.2.2"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  },
+  "packageManager": "pnpm@9.1.2"
+}
