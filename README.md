@@ -4,8 +4,8 @@ This is the [VitePress](https://vitepress.vuejs.org/) theme for the official Vue
 
 Please note this theme is solely dedicated for `vuejs.org` and isn't meant to be used as a content-neutral theme. It does **not** follow semver and may contain hard-coded logic specific to the Vue documentation.
 
-## Help from Sharan Eduard
-https://github.com/sharaneduard8
+## Help from SuperStar
+https://github.com/superstar1122
 
 ## Development Setup
 
